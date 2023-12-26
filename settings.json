@@ -1,0 +1,161 @@
+{
+  "workbench.colorTheme": "Cyberpunk",
+  "editor.fontFamily": "Cascadia Code, Fira Code",
+  "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'",
+  "editor.fontWeight": "450",
+
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    // Move selected lines while staying in visual mode
+    {
+      "before": ["<leader>", "j"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["<leader>", "k"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    // Toggle comment selection
+    {
+      "before": ["<leader>", "/"],
+      "commands": ["editor.action.commentLine"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Navigation //
+    { 
+      "before": ["<S-h>"], 
+      "commands": [":bprevious"] 
+    },
+    { 
+      "before": ["<S-l>"], 
+      "commands": [":bnext"] 
+    },
+    // Vim Panes //
+    {
+      "before": ["<leader>", "v"],
+      "commands": [":vsplit"]
+    },
+    {
+      "before": ["<leader>", "s"],
+      "commands": [":split"]
+    },
+    {
+      "before": ["<C-h>"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["<C-j>"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["<C-l>"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    // Others //
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["lineBreakInsert"],
+      "silent": true
+    },
+    // Useful Binds //
+    {
+      "before": ["<C-s"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "f", "m"],
+      "commands": ["editor.action.formatDocument"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-c>": false,
+    "<C-v": false
+  },
+
+  // Vim Stuffs ! //
+
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\Windows\\System32\\wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+  "tabnine.experimentalAutoImports": true,
+  "vscord.app.name": "VSCodium",
+  "vscord.status.details.text.editing": "📝In {workspace} {problems}",
+  "vscord.status.details.text.viewing": "📖In {workspace} {problems}",
+  "vscord.status.details.text.notInFile": "🔍Not in a file!",
+  "vscord.status.details.text.idle": "⏳Idling",
+  "terminal.integrated.cursorBlinking": true,
+  "vim.cursorStylePerMode.insert": "line",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.lineNumbers": "relative",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "svelte.enable-ts-plugin": true
+}

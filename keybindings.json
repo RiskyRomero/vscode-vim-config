@@ -1,0 +1,58 @@
+// Place your key bindings in this file to override the defaults
+[
+    // NAVIGATION //
+    {
+        "key": "shift+a",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+b",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+h",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "shift+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+    // TOGGLE SIDEBAR //
+    {
+        "key": "ctrl+n",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "ctrl+n+e",
+        "command": "-workbench.view.explorer"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "explorerViewletVisible"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.toggleSidebarVisibility",
+        "when": "explorerViewletVisible"
+    },
+    // FILE TREE //
+    {
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "shift+a",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "d",
+        "command": "deleteFile",
+        "when": "explorerViewletFocus"
+    }
+]
